@@ -1,0 +1,47 @@
+.history-container {
+  background-color: #e0f7e9; /* Light green background */
+  color: #004d00; /* Dark green text */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #006400; /* Dark green */
+  border-radius: 5px;
+}
+
+.item-name, .item-quantity, .item-price, .item-date {
+  color: black;
+}
+
+.back-button {
+  background-color: #006400; /* Dark green */
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.back-button:hover {
+  background-color: #004d00; /* Darker green */
+}
+
+.error-container, .loading, .empty-history {
+  color: #006400; /* Dark green */
+}

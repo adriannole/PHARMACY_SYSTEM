@@ -1,0 +1,33 @@
+.project-info-container {
+  background-color: #e0f7e9; /* Light green background */
+  color: #004d00; /* Dark green text */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.project-info-container h2 {
+  color: #006400; /* Dark green */
+  margin-bottom: 10px;
+}
+
+.project-info-container p {
+  color: #004d00; /* Dark green */
+  margin-bottom: 20px;
+}
+
+.project-info-container h3 {
+  color: #006400; /* Dark green */
+  margin-bottom: 10px;
+}
+
+.project-info-container ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.project-info-container li {
+  color: #004d00; /* Dark green */
+  margin-bottom: 5px;
+}
