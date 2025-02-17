@@ -45,7 +45,7 @@ jobs:
         key: ${{ secrets.EC2_KEY_ADD_PRODUCT }}
         port: 22
         script: |
-          docker stop add_product_service || true# ✅
+          docker stop add_product_service || true# ✅ # ✅
           docker rm add_product_service || true# ✅
           docker pull adrixer25/add_product_service:latest  # ✅ Corrección del typo
           docker run -d -p 4000:4000 --name add_product_service adrixer25/add_product_service:latest  # ✅ Cambio de puerto para evitar conflictos

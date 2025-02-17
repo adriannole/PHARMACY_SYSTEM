@@ -29,7 +29,7 @@ export const searchProducts = async (query) => {
 
 export const login = async (credentials) => {
   try {
-    const response = await axios.post("http://localhost:4006/login", credentials);
+    const response = await axios.post("http://172.31.92.236:4006/login", credentials);
     return response.data;
   } catch (error) {
     console.error("Error logging in:", error.message);
