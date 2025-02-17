@@ -16,7 +16,7 @@ export const addToCart = async (item) => {
 
 export const searchProducts = async (query) => {
   try {
-    const response = await axios.get("http://54.224.228.209:4009/search_products", {
+    const response = await axios.get("http://44.203.161.120:4009/search_products", {
       params: { query },
     });
     return response.data;
@@ -29,7 +29,7 @@ export const searchProducts = async (query) => {
 
 export const login = async (credentials) => {
   try {
-    const response = await axios.post("http://54.172.64.214:4006/login", credentials);
+    const response = await axios.post("http://35.173.124.84:4006/login", credentials);
     return response.data;
   } catch (error) {
     console.error("Error logging in:", error.message);
@@ -39,7 +39,7 @@ export const login = async (credentials) => {
 
 export const register = async (user) => {
   try {
-    const response = await axios.post("http://52.87.162.105:4007/register", user);
+    const response = await axios.post("http://35.172.118.22:4007/register", user);
     return response.data;
   } catch (error) {
     console.error("Error registering user:", error.message);
