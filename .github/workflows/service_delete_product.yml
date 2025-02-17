@@ -45,7 +45,7 @@ jobs:
         key: ${{ secrets.EC2_KEY_DELETE_PRODUCT }}
         port: 22
         script: |
-          docker stop delete_product_service || true  # ✅ Detener si está corriendo
+          docker stop delete_product_service || true  # ✅ Detener si está corriendo# ✅
           docker rm delete_product_service || true  # ✅ Eliminar si existe
           docker pull adrixer25/delete_product_service:latest  # ✅ Asegurar descarga de la imagen
           docker run -d -p 4003:4003 --name delete_product_service adrixer25/delete_product_service:latest  # ✅ Agregar nombre al contenedor

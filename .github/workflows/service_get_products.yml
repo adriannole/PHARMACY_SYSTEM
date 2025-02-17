@@ -46,5 +46,5 @@ jobs:
         script: |
           docker stop get_products_service || true  # ✅ Detiene el contenedor si está corriendo
           docker rm get_products_service || true  # ✅ Elimina el contenedor si existe
-          docker pull adrixer25/get_products_service:latest  # ✅ Corrección del tag
+          docker pull adrixer25/get_products_service:latest  # ✅ Corrección del tag # ✅
           docker run -d -p 4012:4012 --name get_products_service adrixer25/get_products_service:latest  # ✅ Agregar nombre al contenedor

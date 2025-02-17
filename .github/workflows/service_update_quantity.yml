@@ -44,7 +44,7 @@ jobs:
         username: ${{ secrets.EC2_USER_UPDATE_QUANTITY }}
         key: ${{ secrets.EC2_KEY_UPDATE_QUANTITY }}
         script: |
-          docker stop update_quantity_service || true  # ✅ Asegúrate de que el nombre del contenedor es correcto
-          docker rm update_quantity_service || true  # ✅ Asegúrate de que el nombre del contenedor es correcto
+          docker stop update_quantity_service || true  # ✅ Asegúrate de que el nombre del contenedor es correcto 
+          docker rm update_quantity_service || true  # ✅ Asegúrate de que el nombre del contenedor es correcto # ✅
           docker pull adrixer25/update_quantity_service:latest  # ✅ Verifica que el nombre de la imagen y el repositorio son correctos
           docker run -d -p 4011:4011 --name update_quantity_service adrixer25/update_quantity_service:latest  # ✅ Verifica que el puerto 4010 no esté en uso

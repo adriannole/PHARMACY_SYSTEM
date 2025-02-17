@@ -47,5 +47,5 @@ jobs:
         script: |
           docker stop reset_cart_service || true
           docker rm reset_cart_service || true
-          docker pull adrixer25/reset_cart_service:latest
+          docker pull adrixer25/reset_cart_service:latest # ✅
           docker run -d -p 4008:4008 --name reset_cart_service adrixer25/reset_cart_service:latest
