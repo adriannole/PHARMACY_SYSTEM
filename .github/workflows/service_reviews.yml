@@ -27,7 +27,7 @@ jobs:
       with:
         context: ./backend/reviews
         push: true
-        tags: your-dockerhub-adrixer25/reviews_service:latest
+        tags: adrixer25/reviews_service:latest  # ✅ Asegúrate de que el nombre del repositorio sea correcto
 
   deploy:
     runs-on: ubuntu-latest
@@ -44,5 +44,7 @@ jobs:
         username: ${{ secrets.EC2_USER_REVIEWS }}
         key: ${{ secrets.EC2_KEY_REVIEWS }}
         script: |
-          docker pull your-dockerhub-adrixer25/reviews_service:latest
-          docker run -d -p 4000:4000 your-dockerhub-adrixer25/reviews_service:latest
+          docker stop reviews_service || true  # ✅ Asegúrate de que el nombre del contenedor sea correcto
+          docker rm reviews_service || true  # ✅ Asegúrate de que el nombre del contenedor sea correcto
+          docker pull adrixer25/reviews_service:latest  # ✅ Asegúrate de que el nombre de la imagen sea correcto
+          docker run -d -p 4016:4016 --name reviews_service adrixer25/reviews_service:latest  # ✅ Verifica que el puerto 4000 esté disponible

@@ -27,7 +27,7 @@ jobs:
       with:
         context: ./backend/inventory
         push: true
-        tags: your-dockerhub-adrixer25/inventory_service:latest
+        tags: adrixer25/inventory_service:latest  # ✅ Se corrige el tag de Docker Hub
 
   deploy:
     runs-on: ubuntu-latest
@@ -43,6 +43,9 @@ jobs:
         host: ${{ secrets.EC2_HOST_INVENTORY }}
         username: ${{ secrets.EC2_USER_INVENTORY }}
         key: ${{ secrets.EC2_KEY_INVENTORY }}
+        port: 22
         script: |
-          docker pull your-dockerhub-adrixer25/inventory_service:latest
-          docker run -d -p 4000:4000 your-dockerhub-adrixer25/inventory_service:latest
+          docker stop inventory_service || true  # ✅ Detener si está corriendo
+          docker rm inventory_service || true  # ✅ Eliminar si existe
+          docker pull adrixer25/inventory_service:latest  # ✅ Asegurar descarga de la imagen
+          docker run -d -p 4015:4015 --name inventory_service adrixer25/inventory_service:latest  # ✅ Asignar nombre al contenedor

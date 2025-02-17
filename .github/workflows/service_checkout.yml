@@ -48,4 +48,4 @@ jobs:
           docker stop checkout_service || true
           docker rm checkout_service || true
           docker pull adrixer25/checkout_service:latest
-          docker run -d -p 4001:4001 --name checkout_service adrixer25/checkout_service:latest
+          docker run -d -p 4002:4002 --name checkout_service adrixer25/checkout_service:latest

@@ -27,7 +27,7 @@ jobs:
       with:
         context: ./backend/sort_cart
         push: true
-        tags: your-dockerhub-adrixer25/sort_cart_service:latest
+        tags: adrixer25/sort_cart_service:latest  # ✅ Se corrige el tag de Docker Hub
 
   deploy:
     runs-on: ubuntu-latest
@@ -43,6 +43,9 @@ jobs:
         host: ${{ secrets.EC2_HOST_SORT_CART }}
         username: ${{ secrets.EC2_USER_SORT_CART }}
         key: ${{ secrets.EC2_KEY_SORT_CART }}
+        port: 22
         script: |
-          docker pull your-dockerhub-adrixer25/sort_cart_service:latest
-          docker run -d -p 4009:4009 your-dockerhub-adrixer25/sort_cart_service:latest
+          docker stop sort_cart_service || true  # ✅ Detener si está corriendo
+          docker rm sort_cart_service || true  # ✅ Eliminar si existe
+          docker pull adrixer25/sort_cart_service:latest  # ✅ Asegurar descarga de la imagen
+          docker run -d -p 4010:4010 --name sort_cart_service adrixer25/sort_cart_service:latest  # ✅ Asignar nombre al contenedor

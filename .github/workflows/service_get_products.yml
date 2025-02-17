@@ -27,7 +27,7 @@ jobs:
       with:
         context: ./backend/get_products
         push: true
-        tags: your-dockerhub-adrixer25/get_products_service:latest
+        tags: adrixer25/get_products_service:latest  # ✅ Corrección del tag
 
   deploy:
     runs-on: ubuntu-latest
@@ -44,5 +44,7 @@ jobs:
         username: ${{ secrets.EC2_USER_GET_PRODUCTS }}
         key: ${{ secrets.EC2_KEY_GET_PRODUCTS }}
         script: |
-          docker pull your-dockerhub-adrixer25/get_products_service:latest
-          docker run -d -p 4011:4011 your-dockerhub-adrixer25/get_products_service:latest
+          docker stop get_products_service || true  # ✅ Detiene el contenedor si está corriendo
+          docker rm get_products_service || true  # ✅ Elimina el contenedor si existe
+          docker pull adrixer25/get_products_service:latest  # ✅ Corrección del tag
+          docker run -d -p 4012:4012 --name get_products_service adrixer25/get_products_service:latest  # ✅ Agregar nombre al contenedor

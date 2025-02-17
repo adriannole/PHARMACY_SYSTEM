@@ -48,4 +48,4 @@ jobs:
           docker stop get_cart_service || true
           docker rm get_cart_service || true
           docker pull adrixer25/get_cart_service:latest
-          docker run -d -p 4003:4003 --name get_cart_service adrixer25/get_cart_service:latest
+          docker run -d -p 4005:4005 --name get_cart_service adrixer25/get_cart_service:latest

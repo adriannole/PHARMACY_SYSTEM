@@ -27,7 +27,7 @@ jobs:
       with:
         context: ./frontend
         push: true
-        tags: your-dockerhub-adrixer25/frontend_service:latest
+        tags: adrixer25/frontend_service:latest  # ✅ Asegúrate de que la imagen es correcta
 
   deploy:
     runs-on: ubuntu-latest
@@ -44,5 +44,7 @@ jobs:
         username: ${{ secrets.EC2_USER_FRONTEND }}
         key: ${{ secrets.EC2_KEY_FRONTEND }}
         script: |
-          docker pull your-dockerhub-adrixer25/frontend_service:latest
-          docker run -d -p 80:80 your-dockerhub-adrixer25/frontend_service:latest
+          docker stop frontend_service || true  # ✅ Asegúrate de que el nombre del contenedor sea correcto
+          docker rm frontend_service || true  # ✅ Asegúrate de que el nombre del contenedor sea correcto
+          docker pull adrixer25/frontend_service:latest  # ✅ Verifica que la imagen y el nombre sean correctos
+          docker run -d -p 3000:3000 --name frontend_service adrixer25/frontend_service:latest  # ✅ Verifica que el puerto 80 no esté en uso

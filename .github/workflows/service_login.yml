@@ -51,4 +51,4 @@ jobs:
           docker stop login_service || true
           docker rm login_service || true
           docker pull adrixer25/login_service:latest
-          docker run -d -p 4004:4004 --name login_service adrixer25/login_service:latest
+          docker run -d -p 4006:4006 --name login_service adrixer25/login_service:latest

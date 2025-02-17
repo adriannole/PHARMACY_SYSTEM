@@ -27,7 +27,7 @@ jobs:
       with:
         context: ./backend/update_quantity
         push: true
-        tags: your-dockerhub-adrixer25/update_quantity_service:latest
+        tags: adrixer25/update_quantity_service:latest  # ✅ Asegúrate de que el nombre de la imagen es correcto
 
   deploy:
     runs-on: ubuntu-latest
@@ -44,5 +44,7 @@ jobs:
         username: ${{ secrets.EC2_USER_UPDATE_QUANTITY }}
         key: ${{ secrets.EC2_KEY_UPDATE_QUANTITY }}
         script: |
-          docker pull your-dockerhub-adrixer25/update_quantity_service:latest
-          docker run -d -p 4010:4010 your-dockerhub-adrixer25/update_quantity_service:latest
+          docker stop update_quantity_service || true  # ✅ Asegúrate de que el nombre del contenedor es correcto
+          docker rm update_quantity_service || true  # ✅ Asegúrate de que el nombre del contenedor es correcto
+          docker pull adrixer25/update_quantity_service:latest  # ✅ Verifica que el nombre de la imagen y el repositorio son correctos
+          docker run -d -p 4011:4011 --name update_quantity_service adrixer25/update_quantity_service:latest  # ✅ Verifica que el puerto 4010 no esté en uso
