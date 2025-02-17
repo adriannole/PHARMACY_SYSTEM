@@ -17,34 +17,34 @@ products = [
     {"name": "Paracetamol 50mg", "category": "analgesic", "price": 4, "img": "/images/5.png"},
 
     # Antihypertensives
-    {"name": "Tomato", "category": "Antihypertensives", "price": 6, "img": "/images/6.png"},
-    {"name": "Cucumber", "category": "Antihypertensives", "price": 2.5, "img": "/images/7.png"},
-    {"name": "Orange pepper", "category": "Antihypertensives", "price": 6, "img": "/images/8.png"},
-    {"name": "Red pepper", "category": "Antihypertensives", "price": 7, "img": "/images/9.png"},
-    {"name": "Yellow pepper", "category": "Antihypertensives", "price": 9, "img": "/images/10.png"},
+    {"name": "Pastillas", "category": "Antihypertensives", "price": 6, "img": "/images/6.png"},
+    {"name": "Umbral", "category": "Antihypertensives", "price": 2.5, "img": "/images/7.png"},
+    {"name": "Powwer", "category": "Antihypertensives", "price": 6, "img": "/images/8.png"},
+    {"name": "Umbral 10", "category": "Antihypertensives", "price": 7, "img": "/images/9.png"},
+    {"name": "Umbral 50", "category": "Antihypertensives", "price": 9, "img": "/images/10.png"},
 
     # Antiemetics
-    {"name": "Chips", "category": "Antiemetics", "price": 6, "img": "/images/11.png"},
-    {"name": "Cookies", "category": "Antiemetics", "price": 7, "img": "/images/12.png"},
+    {"name": "Loratadina Ant", "category": "Antiemetics", "price": 6, "img": "/images/11.png"},
+    {"name": "Loratadina Ant2", "category": "Antiemetics", "price": 7, "img": "/images/12.png"},
 
     # Anti-inflammatory
-    {"name": "Water", "category": "Anti-inflammatory", "price": 6, "img": "/images/13.png"},
-    {"name": "Juice", "category": "Anti-inflammatory", "price": 5, "img": "/images/14.png"},
-    {"name": "Soda", "category": "Anti-inflammatory", "price": 6, "img": "/images/15.png"},
-    {"name": "Coffee", "category": "Anti-inflammatory", "price": 5.5, "img": "/images/16.png"},
-    {"name": "Tea", "category": "Anti-inflammatory", "price": 5.5, "img": "/images/17.png"},
+    {"name": "Inflammatory 10", "category": "Anti-inflammatory", "price": 6, "img": "/images/13.png"},
+    {"name": "Inflammatory 20", "category": "Anti-inflammatory", "price": 5, "img": "/images/14.png"},
+    {"name": "Inflammatory 30", "category": "Anti-inflammatory", "price": 6, "img": "/images/15.png"},
+    {"name": "Inflammatory 40", "category": "Anti-inflammatory", "price": 5.5, "img": "/images/16.png"},
+    {"name": "Inflammatory 50", "category": "Anti-inflammatory", "price": 5.5, "img": "/images/17.png"},
 
     # Antipyretics
-    {"name": "Chicken", "category": "Antipyretics", "price": 3, "img": "/images/18.png"},
-    {"name": "Beef", "category": "Antipyretics", "price": 4, "img": "/images/19.png"},
-    {"name": "Fish", "category": "Antipyretics", "price": 6, "img": "/images/20.png"},
+    {"name": "Amnitriptilina", "category": "Antipyretics", "price": 3, "img": "/images/18.png"},
+    {"name": "Lorasol", "category": "Antipyretics", "price": 4, "img": "/images/19.png"},
+    {"name": "Kallter", "category": "Antipyretics", "price": 6, "img": "/images/20.png"},
     {"name": "Sausage", "category": "Antipyretics", "price": 4.5, "img": "/images/21.png"},
 
     # Anti-allergy
-    {"name": "Cheese", "category": "Anti-allergy", "price": 4, "img": "/images/22.png"},
-    {"name": "Milk", "category": "Anti-allergy", "price": 6, "img": "/images/23.png"},
-    {"name": "Butter", "category": "Anti-allergy", "price": 7, "img": "/images/24.png"},
-    {"name": "Yogurt", "category": "Anti-allergy", "price": 2.5, "img": "/images/25.png"},
+    {"name": "Lorat", "category": "Anti-allergy", "price": 4, "img": "/images/22.png"},
+    {"name": "Lorat33", "category": "Anti-allergy", "price": 6, "img": "/images/23.png"},
+    {"name": "Lorat44", "category": "Anti-allergy", "price": 7, "img": "/images/24.png"},
+    {"name": "Lorat55", "category": "Anti-allergy", "price": 2.5, "img": "/images/25.png"},
 
    
 ]
