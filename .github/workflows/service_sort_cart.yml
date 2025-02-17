@@ -45,7 +45,7 @@ jobs:
         key: ${{ secrets.EC2_KEY_SORT_CART }}
         port: 22
         script: |
-          docker stop sort_cart_service || true  # ✅ Detener si está corriendo
+          docker stop sort_cart_service || true  # ✅ Detene si está corriendo
           docker rm sort_cart_service || true  # ✅ Eliminar si existe
           docker pull adrixer25/sort_cart_service:latest  # ✅ Asegurar descarga de la imagen # ✅
           docker run -d -p 4010:4010 --name sort_cart_service adrixer25/sort_cart_service:latest  # ✅ Asignar nombre al contenedor

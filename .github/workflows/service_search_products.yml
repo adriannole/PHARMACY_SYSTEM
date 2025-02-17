@@ -44,7 +44,7 @@ jobs:
         username: ${{ secrets.EC2_USER_SEARCH_PRODUCTS }}
         key: ${{ secrets.EC2_KEY_SEARCH_PRODUCTS }}
         script: |
-          docker stop search_products_service || true  # ✅ Detiene el contenedor anterior si existe # ✅
+          docker stop search_products_service || true  # ✅ Detine el contenedor anterior si existe # ✅
           docker rm search_products_service || true  # ✅ Elimina el contenedor anterior si existe
           docker pull adrixer25/search_products_service:latest  # ✅ Corrige el tag
           docker run -d -p 4009:4009 --name search_products_service adrixer25/search_products_service:latest  # ✅ Agrega nombre al contenedor

@@ -27,7 +27,7 @@ jobs:
       with:
         context: ./backend/register
         push: true
-        tags: adrixer25/register_service:latest  # ✅ Asegúrate de que el nombre del repositorio sea correcto
+        tags: adrixer25/register_service:latest  # ✅ Asegrate de que el nombre del repositorio sea correcto
 
   deploy:
     runs-on: ubuntu-latest
