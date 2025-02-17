@@ -154,6 +154,8 @@ button {
   color: #006400; /* Dark green */
   padding: 20px;
   border-radius: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .item-name {

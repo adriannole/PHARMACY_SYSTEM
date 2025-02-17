@@ -4,6 +4,8 @@
   padding: 20px;
   border-radius: 10px;
   text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .history-list {
@@ -14,13 +16,21 @@
 
 .history-item {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 10px 0;
   margin-bottom: 10px;
   background-color: #f9f9f9;
   border-bottom: 1px solid #006400; /* Dark green */
   border-radius: 5px;
+}
+
+@media (min-width: 600px) {
+  .history-item {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .item-name, .item-quantity, .item-price, .item-date {

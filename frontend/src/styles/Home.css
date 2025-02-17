@@ -4,6 +4,8 @@
   color: #004d00; /* Dark green text */
   padding: 20px;
   border-radius: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .header {
@@ -35,6 +37,7 @@
   justify-content: center;
   gap: 10px;
   margin: 20px 0;
+  flex-wrap: wrap;
 }
 
 .category-button {
