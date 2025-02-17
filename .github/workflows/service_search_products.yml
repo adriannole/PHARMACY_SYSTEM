@@ -27,7 +27,7 @@ jobs:
       with:
         context: ./backend/search_products
         push: true
-        tags: your-dockerhub-adrixer25/search_products_service:latest
+        tags: adrixer25/search_products_service:latest
 
   deploy:
     runs-on: ubuntu-latest
@@ -44,5 +44,7 @@ jobs:
         username: ${{ secrets.EC2_USER_SEARCH_PRODUCTS }}
         key: ${{ secrets.EC2_KEY_SEARCH_PRODUCTS }}
         script: |
-          docker pull your-dockerhub-adrixer25/search_products_service:latest
-          docker run -d -p 4008:4008 your-dockerhub-adrixer25/search_products_service:latest
+          docker stop search_products_service || true
+          docker rm search_products_service || true
+          docker pull adrixer25/search_products_service:latest
+          docker run -d -p 4008:4008 --name search_products_service adrixer25/search_products_service:latest
