@@ -18,7 +18,7 @@ const ReviewsPage = () => {
     const fetchReviews = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch("http://localhost:4016/reviews?product_id=some_product_id", {
+        const response = await fetch("http://54.160.240.44:4016/reviews?product_id=some_product_id", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -52,7 +52,7 @@ const ReviewsPage = () => {
 
   const handleAddReview = async () => {
     try {
-      const response = await fetch("http://localhost:4016/reviews", {
+      const response = await fetch("http://54.160.240.44:4016/reviews", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
