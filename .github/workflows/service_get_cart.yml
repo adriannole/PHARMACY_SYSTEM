@@ -45,7 +45,7 @@ jobs:
         key: ${{ secrets.EC2_KEY_GET_CART }}
         port: 22
         script: |
-          docker stop get_cart_service || true# ✅
+          docker stop get_cart_service || true# ✅# ✅ Corr
           docker rm get_cart_service || true # 
           docker pull adrixer25/get_cart_service:latest
           docker run -d -p 4005:4005 --name get_cart_service adrixer25/get_cart_service:latest

@@ -18,7 +18,7 @@ const InventoryPage = () => {
     const fetchInventory = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch("http://54.175.0.204:4015/inventory", {
+        const response = await fetch("http://54.210.170.60:4015/inventory", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -52,7 +52,7 @@ const InventoryPage = () => {
 
   const handleAddProduct = async () => {
     try {
-      const response = await fetch("http://54.175.0.204:4015/inventory", {
+      const response = await fetch("http://54.210.170.60:4015/inventory", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -75,7 +75,7 @@ const InventoryPage = () => {
 
   const handleDeleteProduct = async (productId) => {
     try {
-      const response = await fetch(`http://54.175.0.204:4015/inventory/${productId}`, {
+      const response = await fetch(`http://54.210.170.60:4015/inventory/${productId}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -95,7 +95,7 @@ const InventoryPage = () => {
 
   const handleUpdateProduct = async (productId, updatedFields) => {
     try {
-      const response = await fetch(`http://54.175.0.204:4015/inventory/${productId}`, {
+      const response = await fetch(`http://54.210.170.60:4015/inventory/${productId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

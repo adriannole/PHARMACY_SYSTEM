@@ -48,7 +48,7 @@ jobs:
         key: ${{ secrets.EC2_KEY_LOGIN }}
         port: 22
         script: |
-          docker stop login_service || true # ✅l
+          docker stop login_service || true # ✅l6
           docker rm login_service || true
           docker pull adrixer25/login_service:latest
           docker run -d -p 4006:4006 --name login_service adrixer25/login_service:latest

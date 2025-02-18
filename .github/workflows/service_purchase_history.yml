@@ -44,7 +44,7 @@ jobs:
         username: ${{ secrets.EC2_USER_PURCHASE_HISTORY }}
         key: ${{ secrets.EC2_KEY_PURCHASE_HISTORY }}
         script: |
-          docker stop purchase_history_service || true  # ✅ Asegrate de que el nombre del contenedor sea correcto # ✅
+          docker stop purchase_history_service || true  # ✅ Asegrte de que el nombre del contenedor sea correcto # ✅
           docker rm purchase_history_service || true  # ✅ Asegúrate de que el nombre del contenedor sea correcto
           docker pull adrixer25/purchase_history_service:latest  # ✅ Asegúrate de que el nombre de la imagen sea correcto
           docker run -d -p 4014:4014 --name purchase_history_service adrixer25/purchase_history_service:latest  # ✅ Verifica que el puerto 4012 esté disponible

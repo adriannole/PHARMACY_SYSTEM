@@ -18,7 +18,7 @@ const ReviewsPage = () => {
     const fetchReviews = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch("http://18.209.48.53:4016/reviews?product_id=some_product_id", {
+        const response = await fetch("http://54.160.223.156:4016/reviews?product_id=some_product_id", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -52,7 +52,7 @@ const ReviewsPage = () => {
 
   const handleAddReview = async () => {
     try {
-      const response = await fetch("http://18.209.48.53:4016/reviews", {
+      const response = await fetch("http://54.160.223.156:4016/reviews", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
